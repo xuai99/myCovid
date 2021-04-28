@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".chart">
+    <TextView
+        android:drawableStart="@drawable/ic_assignment_return_black_24dp"
+        android:padding="10dp"
+        android:id="@+id/backTostats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textAlignment="textStart"
+        android:textColor="#050505"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical">
+
+        <TextView
+            android:text="Recover/Deathrate percentage"
+            android:textColor="#000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/showCountry"
+                android:text="Country"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/showTotalCases"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total Cases: "
+                android:textColor="#000"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/showTotalDeath"
+                android:text="Total Death"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/ShowRecoverd"
+            android:text="Recovered: "
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/myPieChart"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" >
+    </com.github.mikephil.charting.charts.PieChart>
+
+</LinearLayout>
